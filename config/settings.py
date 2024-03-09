@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "books.apps.BooksConfig",
     "movies.apps.MoviesConfig",
+    "api.apps.ApiConfig",
     'rest_framework',
     'rest_framework.authtoken',
+
+    # https://docs.graphene-python.org/projects/django/en/latest/installation/
+    "graphene_django"
 ]
 
 MIDDLEWARE = [
@@ -84,6 +88,12 @@ DATABASES = {
     }
 }
 
+
+GRAPHENE = {
+    "SCHEMA": "api.schema.schema"
+}
+
+# https://django-graphql-jwt.domake.io/quickstart.html#installation
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [

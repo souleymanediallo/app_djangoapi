@@ -8,5 +8,6 @@ urlpatterns = [
     path("books/", include("books.urls")),
     path("auth/", obtain_auth_token, name="api_token_auth"),
     path("movies/", include("movies.urls")),
+    path("api/", include("api.urls")),
     #path('api/', include('rest_framework.urls'))
 ]
